@@ -1,0 +1,30 @@
+
+    <script type="text/javascript">
+  //Make the notification box delay automatically deleted from the page
+    $(document).ready(function () {
+        ///Delay to clear the success, failure message
+        if ($('.ui.success.message').length > 0) {
+            setTimeout(function() {
+                $('.ui.success.message').fadeOut(400)
+            }, 3000)
+        } else if ($('.ui.error.message').length > 0) {
+            setTimeout(function() {
+                $('.ui.error.message').fadeOut(400)
+            }, 3000)
+        }
+
+        //Click the button to bring up the drop down box
+        $('.ui.dropdown').dropdown();
+
+        //The mouse is hovering over the avatar, popping up the bubble prompt box
+        $('.post-content .avatar-link').popup({
+            inline: true,
+            position: 'bottom right',
+            lastResort: 'bottom right'
+        });
+    })
+    </script>
+
+</body>
+
+</html>
